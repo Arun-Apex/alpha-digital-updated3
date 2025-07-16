@@ -15,33 +15,16 @@
     </div>
     <div class="panel-body" ng-show="savedFiles.length == 0">
       Please register the player ID
-      at pisignage.com to generate the license files.Then either save the license file from the email or download
-      at pisignage.com/subscriptions.<br><br>
+      at alpha-digital to generate the license files.<br><br>
       By uploading license files to your local server, they are downloaded to players automatically.
     </div><small class="alert alert-danger" ng-show="statusMsg">{{statusMsg}}</small>
-    <div class="form-group" ng-show="savedFiles.length > 0">
-      <input
-          type="text"
-          class="form-control"
-          placeholder="Search licenses"
-          ng-model="searchLicense"
-      />
-      <select
-          id="licenseSelect"
-          class="form-control"
-          ng-model="selectedFile"
-          ng-options="file for file in savedFiles | filter: searchLicense"
-      >
-        <option value="" disabled>Select a license</option>
-      </select>
-      <button
-          class="btn btn-danger"
-          ng-disabled="!selectedFile"
-          ng-click="deleteEntry(selectedFile)"
-      >
-          Delete License
-      </button>
-    </div>
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="file in savedFiles |  filter: searchLicense">
+        <p>{{file}}
+          <button class="btn btn-link btn-sm pull-right" ng-click="deleteEntry(file)"><i class="fa fa-close text-danger"></i></button>
+        </p>
+      </li>
+    </ul>
   </div>
   <div class="panel panel-info">
     <div class="panel-heading">
@@ -50,7 +33,7 @@
     <div class="panel-body">
       <form class="form-horizontal" role="form" name="settingsForm">
         <div class="form-group">
-          <label class="col-xs-4 control-label" for="user">username at pisignage.com</label>
+          <label class="col-xs-4 control-label" for="user">username</label>
           <div class="col-xs-4">
             <div class="input-group">
               <input class="form-control" type="text" name="user" ng-model="settings.installation" required=""/><span class="input-group-btn"><a class="btn btn-success" type="button" ng-click="saveSettings()" ng-disabled="!settingsForm.user.$dirty">SAVE</a></span>

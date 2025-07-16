@@ -165,10 +165,7 @@ angular.module('piAssets.services', [])
                         $http.get(piUrls.files, {})
                             .success(function (data, status) {
                                 if (data.success) {
-                                    assetLoader.asset.files = data.data.files || [];
-                                    if (data.data.systemAssets) {
-                                        assetLoader.asset.files = assetLoader.asset.files.concat(data.data.systemAssets)
-                                    }
+                                    assetLoader.asset.files = data.data.files;
                                     if (data.data.dbdata) {
                                         assetLoader.asset.filesDetails = {};
                                         data.data.dbdata.forEach(function (dbdata) {

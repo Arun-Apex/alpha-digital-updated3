@@ -82,17 +82,6 @@ angular.module('piServerApp', [
                 }
             })
 
-            .state("home.map", {
-                url: "map",
-                 views: {
-                  "main": {
-                     templateUrl: 'app/partials/map-view.html',
-                     controller: 'MapCtrl'
-                     }
-                }
-            })
-
-
             // .state("home.players.players_details", {
             //     url: "players/:player?group",
             //     views: {
@@ -277,7 +266,7 @@ angular.module('piServerApp', [
                     $modal.open({
                         template: [
                             '<div class="modal-header">',
-                            '<h3 class="modal-title">Please Select your account name at pisignage.com</h3>',
+                            '<h3 class="modal-title">Please  type account name here</h3>',
                             '</div>',
                             '<div class="modal-body">',
                             '<input class="form-control" type="text", name="user" ng-model="serverConfig.installation", required="">',

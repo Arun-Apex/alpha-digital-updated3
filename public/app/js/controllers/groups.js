@@ -502,9 +502,7 @@ angular.module('piGroups.controllers', [])
             $scope.orientations = [
                 {value: 'landscape', name: "Landscape Mode"},
                 {value: 'portrait', name: "Portrait Right (Hardware)"},
-                {value: 'portrait270', name: "Portrait Left (Hardware)"},
-                {value: 'invert', name: "Vertical Flip"},
-                {value: 'invert-horizontal', name: "Horizontal Flip"}
+                {value: 'portrait270', name: "Portrait Left (Hardware)"}
             ];
 
             $scope.tempPopup.monitorArrangement = $scope.tempPopup.monitorArrangement || {};

@@ -4,8 +4,8 @@ nav.navbar.navbar-default.navbar-fixed-top
             button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
                 span.sr-only Toggle navigation
                 i.fa.fa-bars
-            a.navbar-brand(href='http://pisignage.com', target="_self")
-                img(src="app/img/pisignage-logo.png",height="32px")
+            a.navbar-brand(href='https://apexinno.com', target="_self")
+                img(src="app/img/apex-logo.png",height="32px")
 
         #navbar.navbar-collapse.collapse
             ul.nav.navbar-nav(style="margin-left:20px;")
@@ -19,15 +19,15 @@ nav.navbar.navbar-default.navbar-fixed-top
                     a(ui-sref="home.settings",ui-sref-opts="{reload: true}") Settings
             button.btn.btn-link.pull-right(ng-click="launchCastApp()", ng-show="castStatus.devicesAvailable")
                 img.img-thumbanail(ng-show="castStatus.deviceState == '0'",src="/app/img/ic_cast_black_24dp.png",
-                title="Chromecast devices available, add them to piSignage")
+                title="Chromecast devices available, add them to ")
                 img.img-thumbanail(ng-show="castStatus.deviceState != '0'",src="/app/img/ic_cast_connected_black_24dp.png",
                 title="Chromecast device connected")
 
             ul.nav.navbar-nav.navbar-right
                 li
-                    a(href="https://twitter.com/pisignage", target="_blank")
+                    a(href="https://facebook.com/apexinnoth", target="_blank")
                         small.text-info follow us on&nbsp;
-                            i.fa.fa-twitter-square.text-info
+                            i.fa.fa-facebook-square.text-info
                             | &nbsp;for latest updates and tips
                         br
                         small.text-muted version hash: {{serverConfig.version}}, {{serverConfig.date}}
